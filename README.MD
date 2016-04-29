@@ -1,0 +1,14 @@
+# CustomEdit
+
+自定义可删除按钮编辑框
+
+安卓自定义控件
+重写EditText设置它的DrawableRight图片。提供setRightPic的方法用来设置res/Bitmap/Drawable格式的图片。
+主要方法
+
+1.setCompoundDrawables
+这个方法是EditText的方法可以用来设置图片的位置。一般都放右侧。
+
+2.addTextChangedListener这个方法也是TextView父类的方法用来为文本改变事件添加监听这里用来监听文本数来控制右侧图片的显示
+
+3.设置文本框的onTouchEvent为文本框区域的点击事件设置监听

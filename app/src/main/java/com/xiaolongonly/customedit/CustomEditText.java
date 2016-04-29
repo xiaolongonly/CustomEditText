@@ -90,6 +90,18 @@ public class CustomEditText extends EditText {
         dRight = new BitmapDrawable(resBitmap);
         dRight.setBounds(0, 0, (int) this.getTextSize(), (int) this.getTextSize());
     }
+
+    public void setRightPic(Bitmap bitmap)
+    {
+        dRight = new BitmapDrawable(bitmap);
+        dRight.setBounds(0, 0, (int) this.getTextSize(), (int) this.getTextSize());
+    }
+
+    public void setRightPic(Drawable drawable)
+    {
+        dRight = drawable;
+        dRight.setBounds(0, 0, (int) this.getTextSize(), (int) this.getTextSize());
+    }
     /**
      * 添加触摸事件 点击之后 出现 清空editText的效果
      */
@@ -112,13 +124,13 @@ public class CustomEditText extends EditText {
         return super.onTouchEvent(paramMotionEvent);
     }
 
-    /**
-     * 显示右侧X图片的
-     * <p/>
-     * 左上右下
-     */
-    @Override
-    public void setCompoundDrawables(Drawable paramDrawable1, Drawable paramDrawable2, Drawable paramDrawable3, Drawable paramDrawable4) {
-        super.setCompoundDrawables(paramDrawable1, paramDrawable2, paramDrawable3, paramDrawable4);
-    }
+//    /**
+//     * 显示右侧X图片的
+//     * <p/>
+//     * 左上右下
+//     */
+//    @Override
+//    public void setCompoundDrawables(Drawable paramDrawable1, Drawable paramDrawable2, Drawable paramDrawable3, Drawable paramDrawable4) {
+//        super.setCompoundDrawables(paramDrawable1, paramDrawable2, paramDrawable3, paramDrawable4);
+//    }
 }
